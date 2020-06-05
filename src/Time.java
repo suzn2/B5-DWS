@@ -81,10 +81,14 @@ public class Time {
         this.day = day;
     }
 
-
-
-
-
+    public void addTime(Time target){
+        seconds += target.getSeconds();
+        minute += target.getMinute();
+        hour += target.getHour();
+        day += target.getDay();
+        mounth += target.getMounth();
+        year += target.getYear();
+    }
 
     public static int convertMinuteToSeconds(int minute){
         return minute * 60;

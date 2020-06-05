@@ -1,7 +1,7 @@
 import java.lang.Thread;
 
 public class WorldTimeMode implements Mode {
-    TimeManager time_manager = new TimeManager();
+    TimeManager time_manager = TimeManager.getInstance();
     Segment segment = new Segment();
     Thread world_time_updater = new Thread();
     World[] worlds = new World[20];
@@ -44,7 +44,8 @@ public class WorldTimeMode implements Mode {
 
     void syncWorldTime() {
         Time current_time = time_manager.getCurrentTime();   // 현재 시간
-        Time current_world_time = new Time(current_time + worlds[world_index].weight);     // 현재시간 + 나라별 시간차 가중치
+        current_time.addTime(worlds[world_index].weight);    // 현재시간 + 나라별 시간차 가중치
+
         //세그먼트 출력 어퍼/로워
 
 

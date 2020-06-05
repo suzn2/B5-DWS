@@ -11,8 +11,6 @@ public class ModeManager implements Mode{
     private boolean overwrite_action_exist = false;
     private boolean is_main_screen = true;
 
-
-
     public ModeManager(Segment segment){
         this.segment = segment;
     }

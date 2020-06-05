@@ -15,16 +15,22 @@
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:upstream" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
     </expand>
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d4f68cd-6d3f-4a4c-9105-7235457d20d3" name="Default Changelist" comment="" />
+    <list default="true" id="8d4f68cd-6d3f-4a4c-9105-7235457d20d3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/ModeManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Theme.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ThemeMode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Time.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/World.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/WorldTimeMode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Segment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Segment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/System.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/System.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TimeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TimeManager.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,6 +55,9 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -60,8 +69,14 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1591125294423</updated>
+      <workItem from="1591168361629" duration="5887000" />
+      <workItem from="1591174349288" duration="4533000" />
+      <workItem from="1591330920354" duration="674000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -73,5 +88,20 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser" timestamp="1591171835399">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1591171835399" />
+    <state x="275" y="28" key="SettingsEditor" timestamp="1591177013624">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="275" y="28" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1591177013624" />
+    <state x="502" y="199" key="git4idea.merge.GitPullDialog" timestamp="1591179061147">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="502" y="199" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1591179061147" />
   </component>
 </project>

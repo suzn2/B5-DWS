@@ -7,21 +7,43 @@ public class WorldTimeMode implements Mode {
     World[] worlds = new World[20];
     int world_index = 0;
     boolean locked = false;     // 초기에는 locked 되어있지 않으므로 false로 초기화
+    Time current_time = new Time();
 
     void initWorldTimeMode() {
-
+        world_time_updater = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(1000);
+                    syncWorldTime();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
     }
 
     void nextWorldTime() {
         increaseWorldTimeIndex();
 
+        // 변경된 나라로 시간 동기화
+        syncWorldTime();
         // 변경된 값 세그먼트에 출력 SetSegmentUpper(“국가명”)
+        segment.setSegmentUpper(worlds[world_index].name, true);
+        // 변경된 나라의 시간 출력
+        segment.setSegmentLower(current_time.getHour() + ":" + current_time.getMinute() + ":" + current_time.getSeconds(), true);
     }
 
     void prevWorldTime() {
         decreaseWorldTimeIndex();
 
+        // 변경된 나라로 시간 동기화
+        syncWorldTime();
         // 변경된 값 세그먼트에 출력 SetSegmentUpper(“국가명”)
+        segment.setSegmentUpper(worlds[world_index].name, true);
+        // 변경된 나라의 시간 출력
+        segment.setSegmentLower(current_time.getHour() + ":" + current_time.getMinute() + ":" + current_time.getSeconds(), true);
+
     }
 
     void increaseWorldTimeIndex() {
@@ -43,12 +65,8 @@ public class WorldTimeMode implements Mode {
     }
 
     void syncWorldTime() {
-        Time current_time = time_manager.getCurrentTime();   // 현재 시간
+        current_time = time_manager.getCurrentTime();   // 현재 시간
         current_time.addTime(worlds[world_index].weight);    // 현재시간 + 나라별 시간차 가중치
-
-        //세그먼트 출력 어퍼/로워
-
-
     }
 
     @Override
